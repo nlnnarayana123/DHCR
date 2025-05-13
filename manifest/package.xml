@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<types>
-		<members>IndividualApplication</members>
-		<name>CustomObject</name>
-	</types>
-	<types>
-		<members>MPMIndividualAppActions_JoshDavies_12</members>
-		<name>OmniUiCard</name>
+		<members>caseCreationForm</members>
+		<members>eligibilityRuleSinglestep</members>
+		<name>LightningComponentBundle</name>
 	</types>
 	<version>64.0</version>
 </Package>
