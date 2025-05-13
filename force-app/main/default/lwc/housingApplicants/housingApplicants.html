@@ -47,7 +47,7 @@
                                         </div>
                                     </th>
                                     <th scope="col">
-                                        <div class="slds-truncate custom1" title="Listing Order/Position #">Row Number</div>
+                                        <div class="slds-truncate custom1" title="Listing Order/Position #">Row #</div>
                                     </th>
                                         <th scope="col">
                                             <div class="slds-truncate custom1" title="Position #">Position #</div>
@@ -179,33 +179,34 @@
                                         <td colspan="12">
                                             <div class="detail-wrapper">
                                                 <div class="custom-detail-container">
-                                                    <div class="slds-grid slds-gutters">
-                                                        <div class="slds-col slds-size_1-of-2">
-                                                            <div class="slds-m-bottom_small">
-                                                                <div class="detail-value"><span class="detail-label">Applicant Name:</span> {applicant.name}</div>
-                                                                <!-- <div class="detail-value">{applicant.name}</div> -->
-                                                            </div>
-                                                            <div class="slds-m-bottom_small">
-                                                                <div class="detail-value"><span class="detail-label" >Mobile Phone:</span> {applicant.mobilePhone}</div>
-                                                                <!-- <div class="detail-value">{applicant.mobilePhone}</div> -->
-                                                            </div>
-                                                            <div class="slds-m-bottom_small">
-                                                                <div class="detail-value"><span class="detail-label">Time (Days) in Waitlist:</span> {applicant.waitlistDays} </div>
-                                                                <!-- <div class="detail-value">{applicant.waitlistDays}</div> -->
-                                                            </div>
-                                                            <div class="slds-m-bottom_small">
-                                                                <div class="detail-value"><span class="detail-label">Applied Order:</span> {applicant.appliedOrder}</div>
-                                                                <!-- <div class="detail-value">{applicant.appliedOrder}</div> -->
+                                                    
+                                                    <div class="slds-grid slds-wrap slds-gutters">
+
+                                                        <div class="slds-col slds-size_1-of-2 slds-m-bottom_small">
+                                                            <div class="slds-grid">
+                                                                <div class="slds-col slds-size_2-of-5 slds-text-align_right slds-p-right_x-small"><strong>Applicant Name:</strong></div>
+                                                                <div class="slds-col slds-size_3-of-5">{applicant.name}</div>
                                                             </div>
                                                         </div>
-                                                        <div class="slds-col slds-size_1-of-2">
-                                                            <div class="slds-m-bottom_small">
-                                                                <div class="detail-value"><span class="detail-label">Phone:</span> {applicant.phone}</div>
-                                                                <!-- <div class="detail-value">{applicant.phone}</div> -->
+
+                                                        <div class="slds-col slds-size_1-of-2 slds-m-bottom_small">
+                                                            <div class="slds-grid">
+                                                                <div class="slds-col slds-size_2-of-5 slds-text-align_right slds-p-right_x-small"><strong>Phone:</strong></div>
+                                                                <div class="slds-col slds-size_3-of-5">{applicant.phone}</div>
                                                             </div>
-                                                            
-                                                            <div class="slds-m-bottom_small">
-                                                                <div class="detail-value"><span class="detail-label">Applied Income: </span> 
+                                                        </div>
+                                                    
+                                                        <div class="slds-col slds-size_1-of-2 slds-m-bottom_small">
+                                                            <div class="slds-grid">
+                                                                <div class="slds-col slds-size_2-of-5 slds-text-align_right slds-p-right_x-small"><strong>Mobile Phone:</strong></div>
+                                                                <div class="slds-col slds-size_3-of-5">{applicant.mobilePhone}</div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="slds-col slds-size_1-of-2 slds-m-bottom_small">
+                                                            <div class="slds-grid">
+                                                                <div class="slds-col slds-size_2-of-5 slds-text-align_right slds-p-right_x-small"><strong>Applied Income:</strong></div>
+                                                                <div class="slds-col slds-size_3-of-5">
                                                                     <lightning-formatted-number 
                                                                         value={applicant.appliedIncome} 
                                                                         format-style="currency" 
@@ -214,16 +215,73 @@
                                                                     </lightning-formatted-number>
                                                                 </div>
                                                             </div>
-                                                            <div class="slds-m-bottom_small">
-                                                                <div class="detail-value"><span class="detail-label">HH Size:</span> {applicant.occupants}</div>
-                                                                <!-- <div class="detail-value">{applicant.occupants}</div> -->
-                                                            </div>
-                                                            <div class="slds-m-bottom_small">
-                                                                <div class="detail-value"><span class="detail-label">Position #:</span> {applicant.randomizedOrder}</div>
-                                                                <!-- <div class="detail-value">{applicant.randomizedOrder}</div> -->
+                                                        </div>
+                                                    
+                                                        <div class="slds-col slds-size_1-of-2 slds-m-bottom_small">
+                                                            <div class="slds-grid">
+                                                                <div class="slds-col slds-size_2-of-5 slds-text-align_right slds-p-right_x-small"><strong>Time (Days) in Waitlist:</strong></div>
+                                                                <div class="slds-col slds-size_3-of-5">{applicant.waitlistDays}</div>
                                                             </div>
                                                         </div>
+
+                                                        <div class="slds-col slds-size_1-of-2 slds-m-bottom_small">
+                                                            <div class="slds-grid">
+                                                                <div class="slds-col slds-size_2-of-5 slds-text-align_right slds-p-right_x-small"><strong>HH Size:</strong></div>
+                                                                <div class="slds-col slds-size_3-of-5">{applicant.occupants}</div>
+                                                            </div>
+                                                        </div>
+                                                    
+                                                        <div class="slds-col slds-size_1-of-2 slds-m-bottom_small">
+                                                            <div class="slds-grid">
+                                                                <div class="slds-col slds-size_2-of-5 slds-text-align_right slds-p-right_x-small"><strong>Applied Order:</strong></div>
+                                                                <div class="slds-col slds-size_3-of-5">{applicant.appliedOrder}</div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="slds-col slds-size_1-of-2 slds-m-bottom_small">
+                                                            <div class="slds-grid">
+                                                                <div class="slds-col slds-size_2-of-5 slds-text-align_right slds-p-right_x-small"><strong>Position #:</strong></div>
+                                                                <div class="slds-col slds-size_3-of-5">{applicant.randomizedOrder}</div>
+                                                            </div>
+                                                        </div>
+                                                    
+                                                        <div class="slds-col slds-size_1-of-2 slds-m-bottom_small">
+                                                            <div class="slds-grid">
+                                                                <div class="slds-col slds-size_2-of-5 slds-text-align_right slds-p-right_x-small"><strong>Application Number:</strong></div>
+                                                                <div class="slds-col slds-size_3-of-5">{applicant.individualApplicationNumber}</div>
+                                                            </div>
+                                                        </div>
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        <template if:true={applicant.isApplicantRejected}>
+                                                            <div class="slds-col slds-size_1-of-2 slds-m-bottom_small">
+                                                                <div class="slds-grid">
+                                                                    <div class="slds-col slds-size_2-of-5 slds-text-align_right slds-p-right_x-small"><strong>Application Rejection Reason:</strong></div>
+                                                                    <div class="slds-col slds-size_3-of-5">{applicant.applicantRejectReason}</div>
+                                                                </div>
+                                                            </div>
+                                                        </template>
+                                                    
+                                                        <template if:true={applicant.isAppealRejected}>
+                                                            <div class="slds-col slds-size_1-of-2 slds-m-bottom_small">
+                                                                <div class="slds-grid">
+                                                                    <div class="slds-col slds-size_2-of-5 slds-text-align_right slds-p-right_x-small"><strong>Appeal Rejection Reason:</strong></div>
+                                                                    <div class="slds-col slds-size_3-of-5">{applicant.appealRejectReason}</div>
+                                                                </div>
+                                                            </div>
+                                                        </template>
+                                                    
                                                     </div>
+                                                    
+                                                    
+                                                    
                                                     <div class="button-container slds-p-top_medium">
                                                         <div class="button-group">
                                                             <template if:true={applicant.sumbittedStatus}>
@@ -234,25 +292,28 @@
                                                     
                                                             <template if:true={applicant.selectedForReview}>
                                                                 <button class="view-details-btn slds-m-horizontal_x-small" onclick={waitlistApplicant} data-id={applicant.individualApplication} name="Accept Review" data-status="Unit Ready to be Offered" data-action="Unit Ready to be Offered">Unit Ready to be Offered</button>
+                                                                <button class="view-details-btn slds-m-horizontal_x-small" onclick={waitlistApplicant} data-id={applicant.individualApplication} name="Reject Applicant" data-status="Closed" data-action="Decline Application" data-substatus="O/MA Rejection">Reject Application</button>
                                                                 <button class="view-details-btn slds-m-horizontal_x-small" onclick={waitlistApplicant} data-id={applicant.individualApplication} name="Withdraw Application" data-status="Closed" data-action="Withdraw Application" data-substatus="Applicant Withdrawal">Withdraw Application</button>
                                                             </template>
                                                             
                                                             <template if:true={applicant.acceptReview}>
                                                                 <button class="view-details-btn slds-m-horizontal_x-small" onclick={waitlistApplicant} data-id={applicant.individualApplication} name="Offer Unit" data-status="Unit Offered" data-action="Offer Unit">Offer Unit</button>
-                                                                <button class="view-details-btn slds-m-horizontal_x-small" onclick={waitlistApplicant} data-id={applicant.individualApplication} name="Decline Applicant" data-status="Closed" data-action="Decline Application" data-substatus="O/MA Rejection">Decline Applicant</button>
+                                                                <button class="view-details-btn slds-m-horizontal_x-small" onclick={waitlistApplicant} data-id={applicant.individualApplication} name="Reject Applicant" data-status="Closed" data-action="Decline Application" data-substatus="O/MA Rejection">Reject Application</button>
+                                                                <button class="view-details-btn slds-m-horizontal_x-small" onclick={waitlistApplicant} data-id={applicant.individualApplication} name="Decline Applicant" data-status="Closed" data-action="Decline Application" data-substatus="O/MA Rejection">Reject Applicant</button>
                                                             </template>
                                                             
                                                             <template if:true={applicant.unitOffered}>
                                                                 <button class="view-details-btn slds-m-horizontal_x-small" onclick={waitlistApplicant} data-id={applicant.individualApplication} name="Accept Unit" data-status="Closed" data-action="Accept Unit" data-substatus="Applicant Placed">Accept Unit</button>
-                                                                <button class="view-details-btn slds-m-horizontal_x-small" onclick={waitlistApplicant} data-id={applicant.individualApplication} name="Decline Unit" data-status="Closed" data-action="Decline Unit" data-substatus="Applicant Declined Unit">Decline Unit</button>    
+                                                                <button class="view-details-btn slds-m-horizontal_x-small" onclick={waitlistApplicant} data-id={applicant.individualApplication} name="Reject Applicant" data-status="Closed" data-action="Decline Application" data-substatus="O/MA Rejection">Reject Application</button>
+                                                                <button class="view-details-btn slds-m-horizontal_x-small" onclick={waitlistApplicant} data-id={applicant.individualApplication} name="Decline Unit" data-status="Closed" data-action="Decline Unit" data-substatus="Applicant Declined Unit">Reject Unit</button>    
                                                             </template>
                                                     
                                                             <template if:true={applicant.appealFiled}>
                                                                 <button class="view-details-btn slds-m-horizontal_x-small" onclick={waitlistApplicant} data-id={applicant.individualApplication} name="Accept Appeal" data-status="Appeal Successful" data-action="Accept Appeal" data-appealstatus="Appeal Successful">Accept Appeal</button>
-                                                                <button class="view-details-btn slds-m-horizontal_x-small" onclick={waitlistApplicant} data-id={applicant.individualApplication} name="Decline Appeal" data-status="Appeal Denied" data-action="Decline Appeal" data-appealstatus="Appeal Denied">Decline Appeal</button>
+                                                                <button class="view-details-btn slds-m-horizontal_x-small" onclick={waitlistApplicant} data-id={applicant.individualApplication} name="Decline Appeal" data-status="Appeal Denied" data-action="Decline Appeal" data-appealstatus="Appeal Denied">Reject Appeal</button>
                                                             </template>
                                                             
-                                                            <button class="view-details-btn slds-m-horizontal_x-small" onclick={waitlistApplicant} data-id={applicant.id}>Waitlist Applicant</button>
+                                                            <!-- <button class="view-details-btn slds-m-horizontal_x-small" onclick={waitlistApplicant} data-id={applicant.id}>Waitlist Applicant</button> -->
                                                             <button class="view-details-btn slds-m-horizontal_x-small" onclick={viewApplication} data-id={applicant.id}>View Applicant Details</button>
                                                         </div>
                                                     </div>
