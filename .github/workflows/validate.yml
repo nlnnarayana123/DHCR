@@ -23,6 +23,6 @@ jobs:
         run: | 
           echo ${{ secrets.SFDX_AUTH_URL }} | sf org login sfdx-url -s -u
 
-      # - name: 'Validate'
-      #   run: |
-      #     sf project deploy validate -d force-app/ -l RunLocalTests -w 30  
+      - name: 'Validate'
+        run: |
+          sf project deploy validate -d force-app/ -l RunLocalTests -w 30  
