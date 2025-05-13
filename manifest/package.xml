@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<types>
-		<members>caseCreationForm</members>
-		<members>eligibilityRuleSinglestep</members>
+		<members>LotteryNumberQueueable</members>
+		<members>LotteryNumberQueueableTest</members>
+		<name>ApexClass</name>
+	</types>
+	<types>
+		<members>housingApplicants</members>
 		<name>LightningComponentBundle</name>
 	</types>
 	<types>
-		<members>MPMIndividualAppActions_JoshDavies_12</members>
-		<name>OmniUiCard</name>
+		<members>HCR_IndividualApplicationAction_English_8</members>
+		<members>HCR_LotteryExecution_English_4</members>
+		<name>OmniScript</name>
 	</types>
 	<version>64.0</version>
 </Package>
