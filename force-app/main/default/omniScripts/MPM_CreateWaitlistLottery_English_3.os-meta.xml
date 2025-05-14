@@ -1912,7 +1912,7 @@
         <propertySetConfig>{
   &quot;controlWidth&quot; : 12,
   &quot;label&quot; : &quot;Create Waitlist Building&quot;,
-  &quot;integrationProcedureKey&quot; : &quot;HCR_CreateWaitlistBuilding&quot;,
+  &quot;integrationProcedureKey&quot; : &quot; &quot;,
   &quot;useContinuation&quot; : false,
   &quot;remoteOptions&quot; : {
     &quot;preTransformBundle&quot; : &quot;&quot;,
