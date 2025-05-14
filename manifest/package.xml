@@ -16,16 +16,5 @@
 		<members>MPCIndividualApplicationDetailsExtract_1</members>
 		<name>OmniDataTransform</name>
 	</types>
-	<types>
-		<members>MCC_FullApplication_English_5</members>
-		<name>OmniScript</name>
-	</types>
-	<types>
-		<members>FCAPPIndividualApplicationDetailTabNew_HCR_7</members>
-		<members>FCMAIndividualApplicationDetailsFilesTab_HCR_8</members>
-		<members>MCMWaitlist_JoshDavies_24</members>
-		<members>MPMIndividualApplicationDetails_JoshDavies_12</members>
-		<name>OmniUiCard</name>
-	</types>
 	<version>64.0</version>
 </Package>
