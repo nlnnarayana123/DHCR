@@ -1,9 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<types>
-		<members>housingApplicants</members>
-		<members>pubsub</members>
-		<name>LightningComponentBundle</name>
+		<members>Application_Rejection</members>
+		<members>Application_Sub_Status_Update</members>
+		<name>Flow</name>
+	</types>
+	<types>
+		<members>DRCreatePaperApplicationUsingContact_1</members>
+		<members>DRExtractFiles_1</members>
+		<members>MCApplicationCreateByContact_1</members>
+		<members>MPCIndividualApplicationDetailsExtract_1</members>
+		<name>OmniDataTransform</name>
+	</types>
+	<types>
+		<members>MCC_FullApplication_English_5</members>
+		<members>MPM_CreateWaitlistLottery_English_3</members>
+		<name>OmniScript</name>
+	</types>
+	<types>
+		<members>FCAPPIndividualApplicationDetailTabNew_HCR_7</members>
+		<members>FCMAIndividualApplicationDetailsFilesTab_HCR_8</members>
+		<members>MCMWaitlist_JoshDavies_24</members>
+		<members>MPMIndividualApplicationDetails_JoshDavies_12</members>
+		<name>OmniUiCard</name>
 	</types>
 	<version>64.0</version>
 </Package>
